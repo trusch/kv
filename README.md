@@ -64,6 +64,14 @@ Options:
   -h, --help          Print help information
   -V, --version       Print version information
 ```
+
+
+## Completion
+
+There is support for completion in zsh and bash shells.
+Those completions are generated using clap but hand-tuned afterwards to support dynamic completion of keys.
+To enable completion for zsh, copy the `completions/kv.zsh` file to your zsh completions directory (for oh-my-zsh users that would be `~/.oh-my-zsh/completions`). Bash users can copy the `completions/kv.bash` file to `/etc/bash_completion.d/`.
+
 ## Examples
 
 ### Store and retrieve some data
@@ -93,7 +101,7 @@ kv set data "This is the data"
 ```bash
 kv set one/complicated/path/foo "This is the right data"
 kv set second/complicated/path/bar "This is the wrong data"
-key=$(kv list data | grep foo)
+key=$(kv list | grep foo)
 kv get $key
 # prints "This is the right data"
 ```
@@ -106,3 +114,4 @@ git push --set-upstream origin main
 kv set data "This is the data"
 kv push
 ```
+
