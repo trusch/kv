@@ -71,8 +71,9 @@ Options:
 There is support for completion in zsh and bash shells.
 Those completions are generated using clap but hand-tuned afterwards to support dynamic completion of keys.
 To enable completion for zsh, copy the `completions/kv.zsh` file to your zsh completions directory (for oh-my-zsh users that would be `~/.oh-my-zsh/completions`). Bash users can copy the `completions/kv.bash` file to `/etc/bash_completion.d/`.
+The vanilla completions (without hand-tuning) are generated using the hidden subcommand `kv generate-shell-completion <SHELL>` where SHELL is one of bash, elvish, fish, powershell or zsh. 
 
-## Examples
+## Usage Examples
 
 ### Store and retrieve some data
 
